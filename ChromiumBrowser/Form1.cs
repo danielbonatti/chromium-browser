@@ -23,6 +23,7 @@ namespace ChromiumBrowser
         private void Form1_Load(object sender, EventArgs e)
         {
             CefSettings settings = new CefSettings();
+            settings.EnablePrintPreview();
             Cef.Initialize(settings);
             navegador = new ChromiumWebBrowser("https://google.com.br");
             this.Controls.Add(navegador);
